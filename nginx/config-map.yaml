@@ -7,7 +7,7 @@ data:
     server {
         listen 80;
         location / {
-                proxy_pass http://staticwebsite:8089/;
+                proxy_pass http://react:3000/;
             }
             location /user/ {
                 proxy_pass http://user:5001;
