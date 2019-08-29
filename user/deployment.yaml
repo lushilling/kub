@@ -1,0 +1,21 @@
+apiVersion: beholder/v1
+kind: Deployment
+metadata:
+  name: user
+  labels: 
+    app: user
+spec:
+  selector:
+    matchLabels:
+      app: user
+  template:
+    metadata:
+      labels:
+        app: user
+    spec:
+      containers:
+      - name: user
+        image: teamio/user:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5001

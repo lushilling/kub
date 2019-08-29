@@ -1,0 +1,21 @@
+apiVersion: beholder/v1
+kind: Deployment
+metadata:
+  name: audit
+  labels: 
+    app: audit
+spec:
+  selector:
+    matchLabels:
+      app: audit
+  template:
+    metadata:
+      labels:
+        app: audit
+    spec:
+      containers:
+      - name: audit
+        image: lushilling/audit:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8081

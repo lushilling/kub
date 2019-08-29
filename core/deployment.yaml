@@ -1,0 +1,21 @@
+apiVersion: beholder/v1
+kind: Deployment
+metadata:
+  name: core
+  labels: 
+    app: core
+spec:
+  selector:
+    matchLabels:
+      app: core
+  template:
+    metadata:
+      labels:
+        app: core
+    spec:
+      containers:
+      - name: core
+        image: lushilling/core:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8083

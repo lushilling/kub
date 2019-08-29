@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mongoaudit
+  labels: 
+    app: mongoaudit
+spec:
+  containers:
+    - name: mongoaudit
+      image: mongo:latest
+      ports:
+      - containerPort: 27017 

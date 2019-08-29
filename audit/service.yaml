@@ -1,0 +1,12 @@
+apiVersion: beholder/v1
+kind: Service
+metadata:
+  name: audit
+spec:
+  selector:
+    app: audit
+  ports: 
+  - protocol: TCP
+    port: 8081
+    targetPort: 8081
+  type: ClusterIP

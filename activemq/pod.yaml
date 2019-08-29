@@ -1,0 +1,17 @@
+apiVersion: beholder/v1
+kind: Pod
+metadata:
+  name: activemq
+  labels: 
+    app: activemq
+spec:
+  securityContext:
+    fsGroup: 1000
+  containers:
+    - name: activemq
+      image: lushilling/activemq:latest
+      ports:
+      - containerPort: 61616 
+      env:
+      - name: ACTIVEMQ_OPTS
+        value: "--prefix=/activemq"

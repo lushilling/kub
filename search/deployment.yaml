@@ -1,0 +1,21 @@
+apiVersion: beholder/v1
+kind: Deployment
+metadata:
+  name: search
+  labels: 
+    app: search
+spec:
+  selector:
+    matchLabels:
+      app: search
+  template:
+    metadata:
+      labels:
+        app: search
+    spec:
+      containers:
+      - name: search
+        image: lushilling/search:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8082

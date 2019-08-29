@@ -1,0 +1,12 @@
+apiVersion: beholder/v1
+kind: Service
+metadata:
+  name: react
+spec:
+  selector:
+    app: react
+  ports: 
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  type: ClusterIP

@@ -1,0 +1,12 @@
+apiVersion: beholder/v1
+kind: Service
+metadata:
+  name: search
+spec:
+  selector:
+    app: search
+  ports: 
+  - protocol: TCP
+    port: 8082
+    targetPort: 8082
+  type: ClusterIP
