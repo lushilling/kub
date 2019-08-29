@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: core
-        image: lushilling/core:latest
+        image: gcr.io/beholder-251311/core
         imagePullPolicy: Always
         ports:
         - containerPort: 8083

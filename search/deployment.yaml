@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: search
-        image: lushilling/search:latest
+        image: gcr.io/beholder-251311/search
         imagePullPolicy: Always
         ports:
         - containerPort: 8082

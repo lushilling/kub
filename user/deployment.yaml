@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: user
-        image: teamio/user:latest
+        image: gcr.io/beholder-251311/user
         imagePullPolicy: Always
         ports:
         - containerPort: 5001

@@ -9,9 +9,6 @@ spec:
     fsGroup: 1000
   containers:
     - name: activemq
-      image: lushilling/activemq:latest
+      image: gcr.io/beholder-251311/activemq
       ports:
-      - containerPort: 61616 
-      env:
-      - name: ACTIVEMQ_OPTS
-        value: "--prefix=/activemq"
+      - containerPort: 61616
